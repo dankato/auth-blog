@@ -1,10 +1,12 @@
+'use strict';
+
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
 const {DATABASE_URL, PORT} = require('./config');
-const {BlogPost} = require('./models');
+const {User, BlogPost} = require('./models');
 
 const app = express();
 
@@ -12,6 +14,16 @@ app.use(morgan('common'));
 app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
+
+
+// PUT Endpoint for password
+
+
+
+
+
+
+
 
 
 app.get('/posts', (req, res) => {
